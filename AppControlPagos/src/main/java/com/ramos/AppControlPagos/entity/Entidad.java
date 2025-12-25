@@ -27,5 +27,5 @@ public class Entidad {
         if (estatus == null) {
             estatus = Estatus.ACTIVO;
         }
-    }   
+    }
 }

@@ -4,10 +4,8 @@ import com.ramos.AppControlPagos.enums.Estatus;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter @Setter
+@AllArgsConstructor @NoArgsConstructor
 @Builder
 @Entity
 public class Entidad {

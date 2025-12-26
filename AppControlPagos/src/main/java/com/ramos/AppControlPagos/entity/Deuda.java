@@ -24,6 +24,7 @@ public class Deuda {
     private int tiempo;
     private LocalDateTime fechaAdquisicion;
     private int numeroPagos;
+    private int numeroPagosdados;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "entidad_id", nullable = false)

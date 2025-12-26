@@ -8,6 +8,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
@@ -27,7 +28,7 @@ public class Deuda {
     private int numeroPagosdados;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "entidad_id", nullable = false)
+    @JoinColumn(name = "idEntidad", nullable = false)
     private Entidad entidad;
 
     @Enumerated(EnumType.STRING)
@@ -39,6 +40,8 @@ public class Deuda {
     @Enumerated(EnumType.STRING)
     private EstadoDeuda estadoDeuda;
 
+    @OneToMany(mappedBy = "deuda", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Pago> listaPagos;
 
     @PrePersist
     public void prePersist() {

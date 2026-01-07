@@ -18,7 +18,7 @@ public class Deuda {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idDeuda;
 
     private BigDecimal cantidad;
     private String motivo;

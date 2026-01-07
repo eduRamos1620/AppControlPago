@@ -12,7 +12,8 @@ public class Entidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_entidad")
+    private Long idEntidad;
 
     private String nombre;
     private String tipo;

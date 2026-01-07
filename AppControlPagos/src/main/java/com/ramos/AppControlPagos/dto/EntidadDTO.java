@@ -12,5 +12,6 @@ public class EntidadDTO {
     private Long id;
     private String nombre;
     private String tipo;
-    private Estatus estatus = Estatus.ACTIVO;
+    private String estatus;
+
 }
